@@ -1,4 +1,0 @@
-clc;clear;close all;
-image = imread('images/bird.png');
-
-gray = .3*image(:,:,1) + .59*image(:,:,2) + .11*image(:,:,3);
