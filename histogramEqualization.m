@@ -5,7 +5,7 @@ subplot(3,2,1)
 imshow(img)
 %%convert rgb to gray image
 gimg = 0.3*img(:,:,1) + 0.59*img(:,:,2) + 0.11*img(:,:,3);
-disp(gimg)
+
 subplot(3,2,2)
 imshow(gimg)
 [m,n] = size(gimg);
@@ -35,14 +35,14 @@ for i=1:256
 end
 for i=1:m
     for j = 1:n
-    img(i,j) =round(histo(img(i,j)+1)*255);
+    new_img(i,j) =round(histo(img(i,j)+1)*255);
     end
 end
-   
+  disp(new_img) 
 subplot(3,2,6)
-stem(x,histo)
+imhist(new_img)
 figure(2)
 subplot(2,2,1)
 histeq(img)
 subplot(2,2,2)
-imhist(gimg)
+imshow(new_img)

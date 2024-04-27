@@ -1,0 +1,11 @@
+clc;clear;close all;
+image = imread('images/birds.png');
+figure(1)
+imshow(image)
+title('original image')
+
+gamma = 0.2;
+
+new_img = image.^gamma;
+figure(2)
+i
